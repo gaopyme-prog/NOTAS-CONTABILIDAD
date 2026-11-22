@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es-CO">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOTAS CONTABILIDAD 2026 B</title>
+<style>
+:root{--bg:#F2F5F9;--card:#fff;--ink:#142033;--muted:#566478;--line:#D6DDE7;--accent:#1D4F91;--on:#fff;--bad:#B3261E;--badsoft:#FBE6E4;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1520;--card:#172131;--ink:#E7EDF6;--muted:#9AA9BE;--line:#2A3A52;--accent:#8DB8F2;--on:#0B1624;--bad:#F19A94;--badsoft:#3B1715;color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:28px 16px 56px}
+main{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.eyebrow{margin:0;font:600 .75rem/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{margin:6px 0 0;font-size:1.75rem;line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+.sub{margin:4px 0 0;color:var(--muted)}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}
+label{font-weight:600;font-size:.95rem}
+input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:12px;width:100%;font-variant-numeric:tabular-nums}
+input:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button{margin-top:8px;font:inherit;font-weight:700;background:var(--accent);color:var(--on);border:0;border-radius:9px;padding:13px;cursor:pointer}
+button:disabled{opacity:.6}
+#out{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.who{margin:0 0 12px;font-weight:600;overflow-wrap:anywhere}
+.hero{background:var(--accent);color:var(--on);border-radius:12px;padding:16px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.hero span{font-weight:600}
+.hero b{font-size:2.6rem;line-height:1;font-variant-numeric:tabular-nums}
+.item{padding:11px 2px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.line{display:flex;justify-content:space-between;gap:12px}
+.line span{color:var(--muted)}
+.line b{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}
+.why{margin:6px 0 0;font-size:.95rem;line-height:1.5;overflow-wrap:anywhere}
+.herowhy{margin:10px 2px 4px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+summary{cursor:pointer;font-weight:600}
+summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#how p{margin:10px 0 0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.err{margin:0;background:var(--badsoft);color:var(--bad);border-radius:10px;padding:12px 14px}
+.note{margin:0;color:var(--muted);font-size:.95rem}
+footer{color:var(--muted);font-size:.85rem}
+</style>
+<main>
+  <header>
+    <p class="eyebrow">Consulta de notas</p>
+    <h1 id="t"></h1>
+    <p class="sub" id="sub"></p>
+  </header>
+  <form id="f" autocomplete="off">
+    <label for="ced">Número de cédula</label>
+    <input id="ced" type="text" inputmode="numeric" placeholder="Sin puntos ni espacios">
+    <div id="kbox" hidden="">
+      <label for="clave">Clave del curso</label>
+      <input id="clave" type="password" autocomplete="off">
+    </div>
+    <button id="go" type="submit">Consultar</button>
+  </form>
+  <section id="out" aria-live="polite" hidden=""></section>
+  <details id="howbox" hidden=""><summary>Cómo se calificó</summary><div id="how"></div></details>
+  <p class="note" id="note"></p>
+  <footer id="foot"></footer>
+</main>
+<script id="pack" type="application/json">{"v":1,"salt":"VFFUunYwSHCs2DjmfvbzxQ==","iter":200000,"k":false,"r":[{"i":"02edc9dc336658983ec5300778509760","d":"0NRFO50sshTZc6bzzvHeCkLwNFMo7Q7cGi3SxyfQP5rc7TFRpMCF5QbJEzeEheyNQLD6OX8zb2ze9m1t9BGtcCHR6cA2Zv9VAMxFrGaYLz7YJbrjeNokiIFQvPtyMFd8DG5V"},{"i":"17007377942569343ab09065d934c519","d":"BpcyCTtU0vFSFsr0d5XC2HidcaRmwQz+kwEGut733BADLzsIY9nw1W1hUuewjwKLzcipbLVJySMIKGHfTqNip56mP0Hb8kIVU1yOdMzhQyizDP3wxFfFsbNSIbh86DE0G51Rfa6yyPk="},{"i":"3e1456d461bce91411a08682d777bb36","d":"tVTTmOD0ZSpdtTzvL23Tw0B7wW0A2P9V8teiKK09Bd/X/h3eXUor/gKHopqBJLb6TVjvYIXoepJq1G9YRdp4rHAXPgK/uPwRJtLwes+ckNA2+5vOWm8FeFcyd7z1NfjcNhjK0nsh1AYq"},{"i":"48ef147b7b7eb4b59c117d27e36466cb","d":"1MFwufdlj2W3q6Sz68mLWVNYhJWBRHAzaFmp66Teu52RlXwoEyr3vg+NPfbZdflIhhBohueplaCTypwOarChD2ypnB9ImyAovMOWALLd4CyCUk7iP/w9IAdV8GSF5w=="},{"i":"49b4ce817a639f696c4a9177544c4e3f","d":"64PX218zsNYfgyaHBdcpQVQIquVhuDtWLkE76rjow4+TMXdzgLBJ6AXXu7kVlMQ9Wq22K8uUg5/mCeEcxV5kI5SdDpBLwI4xSmM4RNtNf/gurlPIkPaUHJ+zY+D3F14+lun55fc="},{"i":"4adb6b4015672a56eb244568572b9f71","d":"2PO6xuEQav8+6aKqeKzFy+D0q5aA7wUTu/5ZJU9nO+21kKCiTUxcqYkSpqSyJxQ0cU6MCKCW9PJo8eyAVWbUFayJxXRZZ2dJua46Q2ZRR21AipPInGyG3eHL8lGzZdbEpuQgEg=="},{"i":"6933200fd723a70064963b3d990db10c","d":"G7fBimf9JMFHkm9vEnvk92QOgTEzL3sNahjWC+eXF+RKGozAuhnrFBQdQM5C3HgpJI1sY4groR78jKK0tSyHJ8mC3485REkKOpfvjNAIB/t2jo4CSbcIpDdKqhyKJE7oI0pb0uVH"},{"i":"92a4de17a74ec024f83fcf3ccc8e371f","d":"bfID7g6VYxKGsSJQpOhV1gDrHcqKGLdSRJcN2i411V5Vi0HxMjrD2cdl8ySKSUwhpcCq2WWXWNrCDqmvOT3uBfgU7z8ZKZUFbCp67BFkl/eNtx+P0hKJQF7PHT+1TdQ/G8QnVw=="},{"i":"9a63a6aad7b27fad268257d9ec280e8f","d":"Xt4o+PUmZxB99OJV9uATuz3MyXix71jBpg3lbvPQC88vOY1nc8GcZpY7wGE7nZfCJMb9qIhdbigyi0y1KXw80yraOrGFoCsSwRu6/lllADdRYdjDkb+GHozPuR8eD13WmB4yvDQ="},{"i":"a2ae47d82a67d39f353aa0dd5e3bce01","d":"b7Ia97g4guoP/DcQZEWkEYPH07Gb/ngXrfGMmB11XdI41GVX1uatMGfaFJ0c9EM7FT+VjT9J9dtu/MuhGNRUrCH26X7CN9KMYSzZbsCkxwOEAYdw/NTT+fzlCoa9rLmqLA=="},{"i":"a93b55791b0edf7297958f93ff8fd856","d":"I58utZlsz1W4ImOxvxFvotQJV7mGAr4lhXduArsNWuy1xoja5hODoNFp6q7IjWZUcaDT0HLMA8TZQFI2Ho5IV4dfaQCSl4Wc/8yI4qzpF6GkJxnNj5bp6iGUb3yPqUf5srKr1J7K"},{"i":"b4beb0ae1984dae377b02ede180c1e08","d":"XNtbh+XFVWAuQxV2XLdIwSmEPDA1bm7Tkc6yn3vnvC6KdDlziwRgiUfymPqLtKjTjHjMz6/gnpy5hNquWdxRmLB4CeEGtVJCvlvyg5xban016mUq1xwJs9EWQKD9W1g8utVPqh42dNc="},{"i":"c0fba777638d71af4db03ebfd9631382","d":"/nnqLySQipESwTLf8BhVcIlOA5X2C3EfWiTwfztOpX8VA988iQk0Yijo4Reg3k7lenDBP9HcTLNFkTFl/5nOBanh5Fu2CVTbsumB0jDjFurhXpjLsipVwaNdXhDBXvO6FJHACUzd"},{"i":"c1d601b792f4932477c6c029516ecb78","d":"JQrO25vxm737wz2R5Bg21QNgSl0SrEHAG1QnvA1cXjW0S0phxPXgef+1wnDUqMCLqNcuVtFq3G+FT3J2Jl1Wbest4nV/asCnaN7JAqSrPFGTLWM7gq+EE/kVWw=="},{"i":"c2e3027011696b9d81545a18945a1acb","d":"BLUQemcqtkLkVZHGcKhEo0vcRJG4D7w1B/n1ykb/qufb7wzSap/BnSdyEy8D/0p6iZzRvogtkw1Sflv3DhCAt3T6LEqqnkhpuRfmjavPvR0Pay0n0D2kS+dlrc6/4MHATcvaSQ4O"},{"i":"c7b9c963be9a440776e6b412aee65385","d":"WTzx7guQMxk7EosaAOHlDmpgdUDeZ7oZQ8o5VRTFrLv8FnMSjaIRsOl2m36xuWS0P/s5sBZdpDpc8xJMDeAwr+vkjhKH0Tub0AmirYF5pmsCpJOeLx7PpkGFxCOJ5z9dZqMw8vPUyw=="},{"i":"cb30793964c665e2a7998b3c2685b1da","d":"GbivT+bg2NtbUEmUHVS4dQqFQcnXnSWgH3/TTrHTGJL749riVJTFkU8gb/2gpvs39fIRUD0/af/M6WjS+MtNuBaWiAJ6Ibffr0T+QWIwVt+C5TLzLtfOAN1xtw+nuFm4smYQ/OaLhQ=="},{"i":"d4b0a17df9c40abfb948c3777a9071e7","d":"VNXNWcvQkyXgGEr+fIlKG1vEhdVdqouXVMM8vxEUu+A+nL/xKMMfC6DDj1js6j2KfqpbUdvjykmsYyAkvHz27+kcFMa4fcZyIZTu1xc0rLGgtRWiE3Rk88ovSnZXfiZt1ya0nAQ="},{"i":"d991f3f3066b539136c71d29b13ba519","d":"i6qsddVYmXpr0oZ0zJhW4ZbyQ4LCmlGhKtCzISYS/sroZpuxSU3J4PqMN7J1pGaYZ+AtVEYmesI+3lCKjaI6oCXoCGGA9/jWdDDAHig0R8rZPKqiVtOHUFCLx3fJ"},{"i":"ebde8b28eb7fa5ad76b1f37b6191cc61","d":"wX7pHunHoWDX3Ou+MZhBfcj+UYMViIe6Waf/AWNJ9yAxW0UC5NnFj9PicaQI2Ma/jhtb5rJGoc3E6ioYPoNA6D+ZlYP5yTUzn5l+9DwiL0mqFqOhkX/IePGRhvIiHGw7zdslAw=="},{"i":"f344ab1341c875fbe9569a1171886110","d":"pg0nGglGBQf5+6saR81xHJ0D9vhn1Z98EZHMtQlub43wy4jQntnzBNU4PPN0umM+NFniNa0E75tUjP/FueF4GNU5fNWT2iJDQkDLSgw5N/MIbegxgJfEYOOOCyrzedUKGA=="},{"i":"f70eb6a2dda5d32e47a850ad201c9120","d":"ey1B+EIETiSP/QyG37c4NbYrxB1aaIoWPdyE2RxUpS5JQnhLqSokcTflhfnTCsYN/xgJrmokYX0tk4RDcTM1EpU5wEmvgvmDX17YTtkfmr63mZIGPQbPUekd3WXeAFD8z/30gGdj"},{"i":"fd4c484d6c7bd0ac54b97874a069b529","d":"CYMljPJYh+Y2+IfpKKqlP5VySD7YamcHi+bIpAutez8ipUP/xCopdYyqi1s/VNWJCMVyEUOac+70V2/Lb+4YlctqGuE1oh/9VEbRP9xomAlyjz6ic1lq98mc/ceWIA=="},{"i":"fe30cb91a7861ad58259176b910379a6","d":"FNDsbzHgoK9YEZ7tujMSbXG3QHYS065ZbpbXhTol+duCClbKOMM3y7AuIbSNiy4El+r6ovPfYKyojv6NZeUw/yhnLrZwnyKXEndrtlSuRNBgNFYXg03uJR+yYxy47IBaz/w="}],"cols":["TALLER 30/10/2026","TALLER 6/11/2026","QUIZ","PARCIAL","DEFINITIVA"],"hi":4,"title":"NOTAS CONTABILIDAD 2026 B","sub":"TERCER CORTE","doc":"OAMR GUERRERO","note":"Verificar, si ves un error en su nota escribir. Comparar con la nota de plataforma.","date":"22 de noviembre de 2026","how":""}</script>
+<script>
+var enc=new TextEncoder();
+function cleanCed(v){ return String(v == null ? '' : v).replace(/\D/g, '').replace(/^0+/, ''); }
+function b64ToBytes(s){ const bin = atob(s); const b = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) b[i] = bin.charCodeAt(i); return b; }
+function bytesToHex(b){ return Array.from(b, function(x){ return x.toString(16).padStart(2, '0'); }).join(''); }
+async function derive(ced, clave, saltB64, iter){
+  const pass = enc.encode(cleanCed(ced) + '|' + String(clave || '').trim().toLowerCase());
+  const km = await crypto.subtle.importKey('raw', pass, 'PBKDF2', false, ['deriveBits']);
+  const master = new Uint8Array(await crypto.subtle.deriveBits({ name: 'PBKDF2', hash: 'SHA-256', salt: b64ToBytes(saltB64), iterations: iter }, km, 256));
+  const a = new Uint8Array(33); a[0] = 105; a.set(master, 1);
+  const k = new Uint8Array(33); k[0] = 107; k.set(master, 1);
+  const idH = new Uint8Array(await crypto.subtle.digest('SHA-256', a));
+  const kH = new Uint8Array(await crypto.subtle.digest('SHA-256', k));
+  const key = await crypto.subtle.importKey('raw', kH, 'AES-GCM', false, ['encrypt', 'decrypt']);
+  return { id: bytesToHex(idH.slice(0, 16)), key: key };
+}
+async function consultar(pack, ced, clave){
+  if (!cleanCed(ced)) return null;
+  const dk = await derive(ced, clave, pack.salt, pack.iter);
+  const rec = pack.r.find(function(x){ return x.i === dk.id; });
+  if (!rec) return null;
+  try {
+    const raw = b64ToBytes(rec.d);
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: raw.slice(0, 12) }, dk.key, raw.slice(12));
+    return JSON.parse(new TextDecoder().decode(pt));
+  } catch (e) { return null; }
+}
+(function(){
+  var pack=JSON.parse(document.getElementById('pack').textContent);
+  var $=function(i){return document.getElementById(i)};
+  $('t').textContent=pack.title||'Consulta de notas';
+  if(pack.sub){$('sub').textContent=pack.sub}else{$('sub').hidden=true}
+  if(pack.note){$('note').textContent=pack.note}else{$('note').hidden=true}
+  var foot=[];
+  if(pack.doc)foot.push('Docente: '+pack.doc);
+  if(pack.date)foot.push('Notas al '+pack.date);
+  $('foot').textContent=foot.join(' · ');
+  if(pack.k)$('kbox').hidden=false;
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e}
+  if(pack.how){
+    pack.how.split(/\n+/).forEach(function(t){if(t.trim())$('how').appendChild(el('p','',t.trim()))});
+    $('howbox').hidden=false;
+  }
+  function row(label,val,why){
+    var it=el('div','item');var l=el('div','line');
+    l.appendChild(el('span','',label));l.appendChild(el('b','',val));it.appendChild(l);
+    if(why)it.appendChild(el('p','why',why));
+    return it;
+  }
+  function show(d,msg){
+    var out=$('out');out.textContent='';out.hidden=false;
+    if(!d){out.appendChild(el('p','err',msg));return}
+    if(d.n)out.appendChild(el('p','who',d.n));
+    if(pack.hi>=0&&pack.cols[pack.hi]!==undefined){
+      var h=el('div','hero');h.appendChild(el('span','',pack.cols[pack.hi]));h.appendChild(el('b','',d.v[pack.hi]));out.appendChild(h);
+      if(d.c&&d.c[pack.hi])out.appendChild(el('p','why herowhy',d.c[pack.hi]));
+    }
+    pack.cols.forEach(function(c,i){
+      if(i===pack.hi)return;
+      out.appendChild(row(c,d.v[i],d.c&&d.c[i]));
+    });
+    (d.x||[]).forEach(function(r){out.appendChild(row(r[0],r[1],r[2]))});
+  }
+  $('f').addEventListener('submit',async function(e){
+    e.preventDefault();
+    var go=$('go');
+    if(!cleanCed($('ced').value)){show(null,'Escribe tu número de cédula.');return}
+    if(!(window.crypto&&window.crypto.subtle)){show(null,'Este navegador no puede abrir la consulta. Entra desde el enlace https que te dio tu docente.');return}
+    go.disabled=true;go.textContent='Buscando…';
+    try{
+      var d=await consultar(pack,$('ced').value,$('clave').value);
+      show(d,pack.k?'No encontramos esa cédula con esa clave. Revisa los dos datos e inténtalo de nuevo.':'No encontramos esa cédula. Escríbela sin puntos ni espacios. Si sigue sin aparecer, consúltalo con tu docente.');
+    }catch(err){show(null,'Ocurrió un error al consultar. Inténtalo de nuevo.')}
+    go.disabled=false;go.textContent='Consultar';
+  });
+})();
+</script>
+</html>
