@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NOTAS CONTABILIDAD 2026 B</title>
 <style>
-:root{--bg:#F2F5F9;--card:#fff;--ink:#142033;--muted:#566478;--line:#D6DDE7;--accent:#1D4F91;--on:#fff;--bad:#B3261E;--badsoft:#FBE6E4;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#0E1520;--card:#172131;--ink:#E7EDF6;--muted:#9AA9BE;--line:#2A3A52;--accent:#8DB8F2;--on:#0B1624;--bad:#F19A94;--badsoft:#3B1715;color-scheme:dark}}
+:root{--bg:#F2F5F9;--card:#fff;--ink:#142033;--muted:#566478;--line:#D6DDE7;--accent:#1D4F91;--on:#fff;--bad:#B3261E;--badsoft:#FBE6E4;--ok:#1E7A4C;--oksoft:#E2F3EA;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1520;--card:#172131;--ink:#E7EDF6;--muted:#9AA9BE;--line:#2A3A52;--accent:#8DB8F2;--on:#0B1624;--bad:#F19A94;--badsoft:#3B1715;--ok:#5CC592;--oksoft:#14301F;color-scheme:dark}}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:28px 16px 56px}
@@ -31,11 +31,17 @@ button:disabled{opacity:.6}
 .line b{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}
 .why{margin:6px 0 0;font-size:.95rem;line-height:1.5;overflow-wrap:anywhere}
 .herowhy{margin:10px 2px 4px}
+.dt{margin:18px 0 2px;font-size:1rem;color:var(--muted);font-weight:700;letter-spacing:.02em}
 details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
 summary{cursor:pointer;font-weight:600}
 summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 #how p{margin:10px 0 0;color:var(--muted);font-size:.95rem;line-height:1.5}
 .err{margin:0;background:var(--badsoft);color:var(--bad);border-radius:10px;padding:12px 14px}
+.habalert{background:var(--badsoft);color:var(--bad);border-radius:10px;padding:12px 14px;margin:12px 0 4px}
+.habalert b{display:block;font-size:1.05rem}
+.habalert p{margin:4px 0 0}
+.habok{margin:12px 0 4px;background:var(--oksoft);color:var(--ok);border-radius:10px;padding:12px 14px;font-weight:600}
+.hab{background:linear-gradient(160deg,#1B2A8F 0%,#3A2BB3 58%,#5B35C8 100%);color:#fff;border-radius:18px;padding:22px 18px 20px;text-align:center;display:flex;flex-direction:column;gap:14px;margin-top:14px}.hab-t{margin:0;font:800 2.1rem/1.05 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#62D6F5;letter-spacing:-.01em}.hab-date{align-self:center;margin:0;background:#fff;color:#1B2A8F;border-radius:22px;padding:6px 18px;font-weight:700;border:2px solid #62D6F5}.hab-h{margin:0;color:#FFB15E;font-weight:700}.hab-steps{display:flex;flex-direction:column;gap:12px;text-align:left}.hab-step{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start}.hab-n{color:#FFB15E;font-weight:800;font-size:1.4rem;line-height:1.1}.hab-b{overflow-wrap:anywhere}.hab-b p{margin:0}.hab-b .hab-sub{margin:5px 0 0 2px}.hab-sub:before{content:"\2022\00a0\00a0";color:#FFB15E}.hab-fin{margin:0;border:1.5px solid #62D6F5;border-radius:14px;padding:12px 14px;font-weight:600;background:rgba(255,255,255,.07)}
 .note{margin:0;color:var(--muted);font-size:.95rem}
 footer{color:var(--muted);font-size:.85rem}
 </style>
@@ -59,7 +65,7 @@ footer{color:var(--muted);font-size:.85rem}
   <p class="note" id="note"></p>
   <footer id="foot"></footer>
 </main>
-<script id="pack" type="application/json">{"v":1,"salt":"VFFUunYwSHCs2DjmfvbzxQ==","iter":200000,"k":false,"r":[{"i":"02edc9dc336658983ec5300778509760","d":"0NRFO50sshTZc6bzzvHeCkLwNFMo7Q7cGi3SxyfQP5rc7TFRpMCF5QbJEzeEheyNQLD6OX8zb2ze9m1t9BGtcCHR6cA2Zv9VAMxFrGaYLz7YJbrjeNokiIFQvPtyMFd8DG5V"},{"i":"17007377942569343ab09065d934c519","d":"BpcyCTtU0vFSFsr0d5XC2HidcaRmwQz+kwEGut733BADLzsIY9nw1W1hUuewjwKLzcipbLVJySMIKGHfTqNip56mP0Hb8kIVU1yOdMzhQyizDP3wxFfFsbNSIbh86DE0G51Rfa6yyPk="},{"i":"3e1456d461bce91411a08682d777bb36","d":"tVTTmOD0ZSpdtTzvL23Tw0B7wW0A2P9V8teiKK09Bd/X/h3eXUor/gKHopqBJLb6TVjvYIXoepJq1G9YRdp4rHAXPgK/uPwRJtLwes+ckNA2+5vOWm8FeFcyd7z1NfjcNhjK0nsh1AYq"},{"i":"48ef147b7b7eb4b59c117d27e36466cb","d":"1MFwufdlj2W3q6Sz68mLWVNYhJWBRHAzaFmp66Teu52RlXwoEyr3vg+NPfbZdflIhhBohueplaCTypwOarChD2ypnB9ImyAovMOWALLd4CyCUk7iP/w9IAdV8GSF5w=="},{"i":"49b4ce817a639f696c4a9177544c4e3f","d":"64PX218zsNYfgyaHBdcpQVQIquVhuDtWLkE76rjow4+TMXdzgLBJ6AXXu7kVlMQ9Wq22K8uUg5/mCeEcxV5kI5SdDpBLwI4xSmM4RNtNf/gurlPIkPaUHJ+zY+D3F14+lun55fc="},{"i":"4adb6b4015672a56eb244568572b9f71","d":"2PO6xuEQav8+6aKqeKzFy+D0q5aA7wUTu/5ZJU9nO+21kKCiTUxcqYkSpqSyJxQ0cU6MCKCW9PJo8eyAVWbUFayJxXRZZ2dJua46Q2ZRR21AipPInGyG3eHL8lGzZdbEpuQgEg=="},{"i":"6933200fd723a70064963b3d990db10c","d":"G7fBimf9JMFHkm9vEnvk92QOgTEzL3sNahjWC+eXF+RKGozAuhnrFBQdQM5C3HgpJI1sY4groR78jKK0tSyHJ8mC3485REkKOpfvjNAIB/t2jo4CSbcIpDdKqhyKJE7oI0pb0uVH"},{"i":"92a4de17a74ec024f83fcf3ccc8e371f","d":"bfID7g6VYxKGsSJQpOhV1gDrHcqKGLdSRJcN2i411V5Vi0HxMjrD2cdl8ySKSUwhpcCq2WWXWNrCDqmvOT3uBfgU7z8ZKZUFbCp67BFkl/eNtx+P0hKJQF7PHT+1TdQ/G8QnVw=="},{"i":"9a63a6aad7b27fad268257d9ec280e8f","d":"Xt4o+PUmZxB99OJV9uATuz3MyXix71jBpg3lbvPQC88vOY1nc8GcZpY7wGE7nZfCJMb9qIhdbigyi0y1KXw80yraOrGFoCsSwRu6/lllADdRYdjDkb+GHozPuR8eD13WmB4yvDQ="},{"i":"a2ae47d82a67d39f353aa0dd5e3bce01","d":"b7Ia97g4guoP/DcQZEWkEYPH07Gb/ngXrfGMmB11XdI41GVX1uatMGfaFJ0c9EM7FT+VjT9J9dtu/MuhGNRUrCH26X7CN9KMYSzZbsCkxwOEAYdw/NTT+fzlCoa9rLmqLA=="},{"i":"a93b55791b0edf7297958f93ff8fd856","d":"I58utZlsz1W4ImOxvxFvotQJV7mGAr4lhXduArsNWuy1xoja5hODoNFp6q7IjWZUcaDT0HLMA8TZQFI2Ho5IV4dfaQCSl4Wc/8yI4qzpF6GkJxnNj5bp6iGUb3yPqUf5srKr1J7K"},{"i":"b4beb0ae1984dae377b02ede180c1e08","d":"XNtbh+XFVWAuQxV2XLdIwSmEPDA1bm7Tkc6yn3vnvC6KdDlziwRgiUfymPqLtKjTjHjMz6/gnpy5hNquWdxRmLB4CeEGtVJCvlvyg5xban016mUq1xwJs9EWQKD9W1g8utVPqh42dNc="},{"i":"c0fba777638d71af4db03ebfd9631382","d":"/nnqLySQipESwTLf8BhVcIlOA5X2C3EfWiTwfztOpX8VA988iQk0Yijo4Reg3k7lenDBP9HcTLNFkTFl/5nOBanh5Fu2CVTbsumB0jDjFurhXpjLsipVwaNdXhDBXvO6FJHACUzd"},{"i":"c1d601b792f4932477c6c029516ecb78","d":"JQrO25vxm737wz2R5Bg21QNgSl0SrEHAG1QnvA1cXjW0S0phxPXgef+1wnDUqMCLqNcuVtFq3G+FT3J2Jl1Wbest4nV/asCnaN7JAqSrPFGTLWM7gq+EE/kVWw=="},{"i":"c2e3027011696b9d81545a18945a1acb","d":"BLUQemcqtkLkVZHGcKhEo0vcRJG4D7w1B/n1ykb/qufb7wzSap/BnSdyEy8D/0p6iZzRvogtkw1Sflv3DhCAt3T6LEqqnkhpuRfmjavPvR0Pay0n0D2kS+dlrc6/4MHATcvaSQ4O"},{"i":"c7b9c963be9a440776e6b412aee65385","d":"WTzx7guQMxk7EosaAOHlDmpgdUDeZ7oZQ8o5VRTFrLv8FnMSjaIRsOl2m36xuWS0P/s5sBZdpDpc8xJMDeAwr+vkjhKH0Tub0AmirYF5pmsCpJOeLx7PpkGFxCOJ5z9dZqMw8vPUyw=="},{"i":"cb30793964c665e2a7998b3c2685b1da","d":"GbivT+bg2NtbUEmUHVS4dQqFQcnXnSWgH3/TTrHTGJL749riVJTFkU8gb/2gpvs39fIRUD0/af/M6WjS+MtNuBaWiAJ6Ibffr0T+QWIwVt+C5TLzLtfOAN1xtw+nuFm4smYQ/OaLhQ=="},{"i":"d4b0a17df9c40abfb948c3777a9071e7","d":"VNXNWcvQkyXgGEr+fIlKG1vEhdVdqouXVMM8vxEUu+A+nL/xKMMfC6DDj1js6j2KfqpbUdvjykmsYyAkvHz27+kcFMa4fcZyIZTu1xc0rLGgtRWiE3Rk88ovSnZXfiZt1ya0nAQ="},{"i":"d991f3f3066b539136c71d29b13ba519","d":"i6qsddVYmXpr0oZ0zJhW4ZbyQ4LCmlGhKtCzISYS/sroZpuxSU3J4PqMN7J1pGaYZ+AtVEYmesI+3lCKjaI6oCXoCGGA9/jWdDDAHig0R8rZPKqiVtOHUFCLx3fJ"},{"i":"ebde8b28eb7fa5ad76b1f37b6191cc61","d":"wX7pHunHoWDX3Ou+MZhBfcj+UYMViIe6Waf/AWNJ9yAxW0UC5NnFj9PicaQI2Ma/jhtb5rJGoc3E6ioYPoNA6D+ZlYP5yTUzn5l+9DwiL0mqFqOhkX/IePGRhvIiHGw7zdslAw=="},{"i":"f344ab1341c875fbe9569a1171886110","d":"pg0nGglGBQf5+6saR81xHJ0D9vhn1Z98EZHMtQlub43wy4jQntnzBNU4PPN0umM+NFniNa0E75tUjP/FueF4GNU5fNWT2iJDQkDLSgw5N/MIbegxgJfEYOOOCyrzedUKGA=="},{"i":"f70eb6a2dda5d32e47a850ad201c9120","d":"ey1B+EIETiSP/QyG37c4NbYrxB1aaIoWPdyE2RxUpS5JQnhLqSokcTflhfnTCsYN/xgJrmokYX0tk4RDcTM1EpU5wEmvgvmDX17YTtkfmr63mZIGPQbPUekd3WXeAFD8z/30gGdj"},{"i":"fd4c484d6c7bd0ac54b97874a069b529","d":"CYMljPJYh+Y2+IfpKKqlP5VySD7YamcHi+bIpAutez8ipUP/xCopdYyqi1s/VNWJCMVyEUOac+70V2/Lb+4YlctqGuE1oh/9VEbRP9xomAlyjz6ic1lq98mc/ceWIA=="},{"i":"fe30cb91a7861ad58259176b910379a6","d":"FNDsbzHgoK9YEZ7tujMSbXG3QHYS065ZbpbXhTol+duCClbKOMM3y7AuIbSNiy4El+r6ovPfYKyojv6NZeUw/yhnLrZwnyKXEndrtlSuRNBgNFYXg03uJR+yYxy47IBaz/w="}],"cols":["TALLER 30/10/2026","TALLER 6/11/2026","QUIZ","PARCIAL","DEFINITIVA"],"hi":4,"title":"NOTAS CONTABILIDAD 2026 B","sub":"TERCER CORTE","doc":"OAMR GUERRERO","note":"Verificar, si ves un error en su nota escribir. Comparar con la nota de plataforma.","date":"22 de noviembre de 2026","how":""}</script>
+<script id="pack" type="application/json">{"v":1,"salt":"OasNefLcLYzP3Q5gCDNY/w==","iter":200000,"k":false,"r":[{"i":"0a1ce955cade5f881448bb6504f974c8","d":"cznpROgqNSgpObRtii1uE4egZrt2f9VsQlRHkt5ke3HtheR1E45RefLsVU0GQZWNFpR/NU0IRF1b1vNWHE72428YQChxgNlwPHuudVKQtbk5tdXpUCiYUYPyolp93GlpA+DFVdp7GNjbeQU="},{"i":"1226bfb0332cf1cdbc194a38bfa92076","d":"5Js/n2tVBc4IBIalm6TYku6DsYx7yG14UsYKCURmlDPOvqLRynNfTV+BUj3YPxwZx6bb2/6eXJdWqj8pdZdQKgVdZ7IlIplBJf9FOGdVicMaNNFC6/UopteaPL4Byr+3jEZCgDKzLImlSgfen9Q="},{"i":"171805d31dacf0e417c95530a271e2f8","d":"WtLS/J1Iz2D6HkpnYFgKDVxRU8d3FiH2rweiXuXJ76+56lFgRXXsuZib0aIBiA2hOcS4ED3nyXB2nieoxLKHLrbl/ADTlW0k5iJHo1Yg6bADtTHZB9NEun7gGOIpaKF16UaET7lvaae7c1M="},{"i":"1a1141031f96b62a1a6b9c72ff077d61","d":"o/I3mHyQnjPLsUvuT6yu2mthEfrQ9vyc2l3uqx1NXXoBCdURuCcL1gMRwss+IWJ3OL6fPqOJPgvUTlEZMx5twTZl28SATu9X2snhtGFRYzKD9EpGeRiFTclAHRY4vQitLnKd8CLoWVFl"},{"i":"1f771e7f613cd5827f162bfc4da4b072","d":"mCsMDEWBDuBQM2vjPDAs5cpfGyh3GN3gxlcwrGPSUjsGaLlI0GNBz3oIMIeQ4gDjH7ZpZQcYEPgPgu9RjayJrrvIFk89+xGFsAZwPOxKPVAqALiKiXwbO8TKjSNbhC5k9PEOww=="},{"i":"2cebb62a0b62eed2d79508b1dc9beb94","d":"ezU4FQ//v+ZWIaFHjHre0XZ7169+/+g4pIO4i72AfwksEQ1UeFhdXWO2Wx8tiV5bWwk57cuOb1tQ/kQ9tsoc8KbaQp6hpgj6eqxsbn6drczKG+MaCpjM8SIhwW+Kd0x1KWOcBFarustZ2cXq"},{"i":"42e8c7f1ee9d28fc47c96de9bc14fcd7","d":"hy05yveZzlziRtu1JfWCsCu2gfc+Y6kFIUj+HRF9nsW8HA/iFuRqT+TekYyqhU53HG998jS8G2dfDEgnL1HEOF14FRN9TxNWENLEx/ZjOAd8tIWmvHVpcKC+nKKmv3HCEmcl6MSxz79Kl1k="},{"i":"56f27170a422ddd4995f31b67e503b60","d":"KKORNYuAMfHYCZ1O4bSEC6pfSN5g+xz8X2aAQ/wIs4HiSpCXz0YB9ozVz/g8Al4mraAiosr4wP2YYB+7nQPQtaZNJVOYnmxY+FuZai326hp0M9WovTpX/J7/DYN0GF6Z19bu"},{"i":"5e9b843f8a5eba13d8d5097d3767cc2a","d":"j0huArZ1OgmaeLGTOg/NLmK7pDUM7TdJ76O9amEwbhdkWFHbILXnHWoQMVLiNyaFA1/EC88lrwVA8CbTqXNZ3QD4nRKJOAPPvo2EPXWv3oZRBnQqi/P4q6A5djeNw5t3GvE/8Ncr145a5TmxjY7w"},{"i":"807741a6ecfe8348d551055e534f3fe0","d":"lbILXpE+UU409xb0IDqRVwI+jMyPUZf7wlCq3pZj0wkPFsxESHOMe7EDWW74RjrDLUY5Sg2CAdCFMCLTFoNJExVQOgosRhQhleDoDHes7freteatl3s+oGWbTeUSIQUa0XxiMrj+gw=="},{"i":"80a5536187877e92344fe80770456fe3","d":"ao+yFbYrqcApzRKIbxCUZJXWiXydKTyBJ5x3Iboa5ZufD5aZQibcw4PsKRIFov8QdOt6OyCqxmFOnYBCEV380TVRXri8vcdZMGA/LLx6e/v7oRiOenU6it5BpmbYGxZnNX8jLYooUYQQ/A=="},{"i":"95fcd1c581768db449c027b6199c8a80","d":"8jHRpnNX9cWAIlHXZkB7uqkgykFrW96aNysIAh+9n6ftVlppoNMSXElwQLfJWcTfK77YyERjYjwNT4d+n8nlKx4S/+kA4Hx6xC4RtKHs9pEymQVYvh6m7jAlQBPzo3o1Rk4UMnuFow=="},{"i":"a432878b65f0160c4ed21902ae467ba0","d":"pvkq3plkAEt3Zr2vJwX+sGDn8hL3feGl+1rjSAsSKRCXhcQyYvb58HCpSXDlcEMRj1hNJ0sSDmsI03tjmlkZ27SdaYXgNRGSADLsQIQ7iyiUQHWrJlvmRGigsDWc9UeGuerFoXmJ3ogm6g=="},{"i":"af7c9b1334d3431a132e64d6a91814b3","d":"BKTviE5lb42zs478SSf0ZzJHLTXvjp1dG/p+O/TmfTkTTOBhhQ4b2JNDMS5TnImRftvZHvKAcdgsXqE1FI8f6Q1RmjjWN7oYlp9C09LPLUjE1oryjbdVh50kWY+luOzkp0vSH4vYBiu3B9Mc"},{"i":"bcd17c9e872fbb310cba9461fdd143ba","d":"ydGWI9SaSV7CwCJ50oOeBvqrrJhGNUXL8I0C8hKbM0nYOhVzX5OK9IUGdHBpvTNDE1nbLueUDpU+tDK8JZDXjwAc9VKBzQAYVcFfxquNvoT/cpTQsx32k0dXjGtXmvPxlA1pVf2hTOsbmcaykQ=="},{"i":"cddf6b66f7cc02824fbaa7d9915925fb","d":"Ufo9/6wo7dqkW6z0bu2OHfbqCaJvEGNctP1ZTdgkg2sPU3qhbC2qYmhlmfw7fKJrf9hyZG56vkEtPhVaXuHpUBiNt5r1GPolBgEj2SHuVdHEGsr45EPYnMvuVVFoGfIS+GrVXJgIILEGmD2B"},{"i":"d031207f34e399ea75b9116d2f759d6e","d":"lCsTbUDYWnYU1f4QHCI1VMHBBGe1XOlJqfm4URG+3vYassCL/VsqrO/v055zVgBECcFuHWUHdsaCPjdFpC3AcS+8iaWc5w3pJCNR4IPSuftVyQj8VadL6Tf6BcdieJ3eFA=="},{"i":"d148bb2ad16e1cd12e1886bdbd68883c","d":"BlbC38njeGx9rqd0bdtm4EKMMPISHk5ZAOgT8wYPbRMhpL+hIE+jvE8dRl+LTCEQ/o4CxpOKHNrJOo/j40S2ybGhcYHVOulTY09EtqLhblvMr/+z1vpP0Gz463qFXC4c3hVsu5yAuNx7sA=="},{"i":"dd1138f75e6f96d294a0db41619c4c92","d":"GJq5x4ctDBwcHRCTthqI2HzbVCgdOogT96RGRjfLJrUF/CKsoGB8fWz6oFBngyC8FVHwvLPKL9FeXSbR/W0Qwtj0IyXSfKBKL3uO0IiMYLAqdKq+6TiBCx2F7zSwmolMPQedijvwA+kwav9P"},{"i":"e67672e34e59abe037dcfcd414874a3f","d":"e1pQCiY/KzD9LRHq4i90+k1oTsArUfBX7W8Ikg471C6S8hojG2DCylJ+OujZhn7TDr04E2agrrsK4g58gjinXPZ6wHxDqgiVVXgFVxouDCwk05lxDWX6i8yK1qtxpNmNccRhA2pUIZo6UdcrAA=="},{"i":"eb222524467cdd62be10d08a2cf1a305","d":"PfITmy4UDe+pLY6WWU7kCmlm2V/DfqBb3/IAojTIEWiPm+GYPQzbvOtH1484m8h9iieiOhfvrWUQLouSKcDRnD7QnvinZwMSZP8xI1muWj5bMyYRD8+SRWWnoMbkXC6rJ4WmkQ=="},{"i":"fa35dcb25c36454cb2df5a6af4190ca5","d":"iTIYKs9Vo3u+yqP/a0Y2P5RmjRGfWwmB9vY3D1+qqUaIrQdIeYQ33S3dIUwuj8dBcNUHnInphBmYKzi3sQ7NxMab8H+iPbehvrbOE1uEm0wEn+Bn5NxrvlT6JduJQhpjcFsf9+Y/IfRz0bwu"},{"i":"fa6a75da36d0595721b6151d12e7b9ad","d":"jwZphkFojEZFYyD6t4Go+dBOqhCZ1UZE9DzLrOS4p+bM9oNQ8s+HGdQnZA5W+rRLpLWQMEd/J/b4j0AvhwodnAIU1ZHkDvCx9Gm+QPNNV6Va047pr8aKGM8lehwJE2vycPwIQNtobq8="},{"i":"fc7369b5ee3cb1840472c4d357befaf7","d":"7/EqQGXIAyY99VLRwAhDQUeaU7RXbfvVix8J4NEs+QTaOr7fa4NzVArlGaR4b2NGxTygXHo6FQC15jMdTbWO5yIyvmAeOmnJBcOkulFs3BJ5Gi1iLWFwH9xfFlHbBpp34FPsJK7VLwmlPNX7BfU="}],"cols":["TALLER 30/10/2026","TALLER 6/11/2026","QUIZ","PARCIAL","DEFINITIVA"],"hi":4,"title":"NOTAS CONTABILIDAD 2026 B","sub":"","doc":"Omar Guerrero Aviles","note":"Revisa que ésta nota coincida con la nota del portal, informa de inmediato al docente, en caso de ser necesario!","date":"22 de noviembre de 2026","how":"","dt":"","hab":{"min":"3.0","ci":4,"fecha":"Del 3 al 5 de diciembre de 2026","valor":"$109.000","pasos":["Ingresa en **www.unipaz.edu.co » Soy Estudiante**","Descarga el recibo de pago con concepto de habilitación.","El valor a cancelar es de **{valor}**, y lo puedes hacer de dos formas:","• Presencial en el **Banco AV Villas** con el recibo impreso.","• **En línea** desde la página web institucional."],"fin":"Y listo, recuerda que debes consultar el día, la hora y el lugar donde presentarás la habilitación."}}</script>
 <script>
 var enc=new TextEncoder();
 function cleanCed(v){ return String(v == null ? '' : v).replace(/\D/g, '').replace(/^0+/, ''); }
@@ -86,6 +92,34 @@ async function consultar(pack, ced, clave){
     const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: raw.slice(0, 12) }, dk.key, raw.slice(12));
     return JSON.parse(new TextDecoder().decode(pt));
   } catch (e) { return null; }
+}
+function habCard(h){
+  function el(t, c, x){ var e = document.createElement(t); if (c) e.className = c; if (x !== undefined) e.textContent = x; return e; }
+  function fill(node, text){
+    String(text).split(/(\*\*[^*]+\*\*|\{valor\})/).forEach(function(part){
+      if (!part) return;
+      if (part === '{valor}') node.appendChild(el('b', '', h.valor));
+      else if (part.slice(0, 2) === '**' && part.slice(-2) === '**') node.appendChild(el('b', '', part.slice(2, -2).split('{valor}').join(h.valor)));
+      else node.appendChild(document.createTextNode(part));
+    });
+  }
+  var card = el('section', 'hab');
+  card.appendChild(el('h2', 'hab-t', 'Habilitaciones'));
+  if (h.fecha) card.appendChild(el('p', 'hab-date', h.fecha));
+  card.appendChild(el('p', 'hab-h', 'Aquí te contamos los pasos a seguir:'));
+  var steps = el('div', 'hab-steps'), n = 0, cur = null;
+  (h.pasos || []).forEach(function(line){
+    line = String(line);
+    var sub = /^\s*[•*-]\s+/.test(line);
+    if (sub){ if (!cur) return; var li = el('p', 'hab-sub'); fill(li, line.replace(/^\s*[•*-]\s+/, '')); cur.appendChild(li); return; }
+    n++;
+    var row = el('div', 'hab-step'); row.appendChild(el('span', 'hab-n', n + '.'));
+    cur = el('div', 'hab-b'); var p = el('p'); fill(p, line); cur.appendChild(p);
+    row.appendChild(cur); steps.appendChild(row);
+  });
+  card.appendChild(steps);
+  if (h.fin) card.appendChild(el('p', 'hab-fin', h.fin));
+  return card;
 }
 (function(){
   var pack=JSON.parse(document.getElementById('pack').textContent);
@@ -117,11 +151,21 @@ async function consultar(pack, ced, clave){
       var h=el('div','hero');h.appendChild(el('span','',pack.cols[pack.hi]));h.appendChild(el('b','',d.v[pack.hi]));out.appendChild(h);
       if(d.c&&d.c[pack.hi])out.appendChild(el('p','why herowhy',d.c[pack.hi]));
     }
+    var hb=pack.hab,hnota=hb?d.v[hb.ci]:'';
+    if(hb&&d.h===1){
+      var al=el('div','habalert');al.appendChild(el('b','','Debes presentar habilitación'));
+      al.appendChild(el('p','','Tu '+String(pack.cols[hb.ci]).toLowerCase()+' es '+hnota+' y la nota mínima para aprobar es '+hb.min+'.'));
+      out.appendChild(al);
+    } else if(hb&&d.h===0){
+      out.appendChild(el('p','habok','Tu '+String(pack.cols[hb.ci]).toLowerCase()+' es '+hnota+': aprobaste y no necesitas habilitar.'));
+    }
+    if(pack.dt&&pack.cols.some(function(c,i){return i!==pack.hi}))out.appendChild(el('h3','dt',pack.dt));
     pack.cols.forEach(function(c,i){
       if(i===pack.hi)return;
       out.appendChild(row(c,d.v[i],d.c&&d.c[i]));
     });
     (d.x||[]).forEach(function(r){out.appendChild(row(r[0],r[1],r[2]))});
+    if(hb&&d.h===1)out.appendChild(habCard(hb));
   }
   $('f').addEventListener('submit',async function(e){
     e.preventDefault();
